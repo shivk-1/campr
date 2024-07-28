@@ -297,3 +297,15 @@ header {
     align-items: center;
     font-size: 2.7em;
 }
+
+.product-name {
+    color: black;
+}
+
+.product-description {
+    color: black;
+}
+
+.product-price {
+    color: black;
+}

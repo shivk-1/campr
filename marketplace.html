@@ -56,7 +56,8 @@
         }
 
         .hero {
-            background: rgba(0, 0, 0, 0.5); /* Transparent background */
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px); /* Transparent background */
             color: #fff;
             padding: 60px 20px;
             margin-bottom: 40px;
@@ -266,9 +267,10 @@
                 productDiv.innerHTML = `
                     <img src="${product.image}" alt="${product.name}">
                     <div class="product-details">
-                        <h3>${product.name}</h3>
-                        <p>${product.description}</p>
-                        <p>Price: $${product.price}</p>
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <p class="product-price">Price: $${product.price}</p>
+
                     </div>
                     <button class="delete-btn" onclick="deleteProduct(${index})">Delete</button>
                 `;
