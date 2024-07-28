@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Campr</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('images/camping.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background: rgba(51, 51, 51, 0.6);
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo {
+            font-size: 2em;
+            margin-left: 20px;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+        }
+
+        .navigation a, .btnLogin-popup, .btnLogout-popup {
+            color: #fff;
+            text-decoration: none;
+            background: transparent;
+            transition: background 0.3s;
+        }
+
+        .active {
+            background: rgba(119, 119, 119, 0.8);
+        }
+
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .contact-info div {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .contact-info i {
+            font-size: 2em;
+            color: #ff5722;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact-form button {
+            background: #ff5722;
+            color: #fff;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #e64a19;
+        }
+
+        footer {
+            background: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info div {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="home.html" class="logo-link">
+            <h2 class="logo">Campr</h2>
+        </a>
+        <nav class="navigation">
+            <a href="home.html" id="home-tab">Home</a>
+            <a href="near me.html" id="near-me-tab">Near Me</a>
+            <a href="marketplace.html" id="marketplace-tab">Marketplace</a>
+            <a href="contact.html" id="contact-tab" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section class="hero">
+            <h1>Contact Us!</h1>
+            <p>We'd love to hear from you. Reach out to us through any of the options below.</p>
+        </section>
+
+        <section class="contact-info">
+            <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Our Address</h3>
+                <p>1234 Camping Road, Campville, CA 90210</p>
+            </div>
+            <div>
+                <i class="fas fa-phone"></i>
+                <h3>Call Us</h3>
+                <p>(123) 456-7890</p>
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p>contact@campr.com</p>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Get in Touch</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Campr. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
